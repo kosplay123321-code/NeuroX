@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NeuroX — Будущее начинается с ИИ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter,system-ui,Arial,sans-serif;
+      background: #0a0a0a url('HOMEPAGE (2).jpg') center top / cover no-repeat;
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px 12px;
+    }
+
+    /* page container to center content and limit width similar to image */
+    .page{max-width:720px;margin:0 auto;position:relative}
+
+    /* Top big headline */
+    header{padding-top:6px;text-align:center;margin-bottom:6px}
+    header h1{font-family:Montserrat, Montserrat, system-ui, sans-serif;font-weight:800;font-size:46px;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,0.8);}
+
+    /* thin nav line under header */
+    .nav{margin-top:8px;border-top:2px solid rgba(255,255,255,0.08);padding-top:10px;display:flex;gap:8px;justify-content:center;font-size:11px;letter-spacing:1px}
+    .nav a{color:rgba(255,255,255,0.65);text-decoration:none;padding:6px 8px}
+
+    /* speech bubble common */
+    .bubble{
+      background:#ffffff; /* default white, overridden */
+      color:#0b0b0b;
+      border-radius:30px;
+      padding:22px 26px;
+      box-shadow:0 16px 40px rgba(0,0,0,0.7);
+      margin:36px 0;
+      position:relative;
+      line-height:1.45;
+    }
+    .bubble.small{padding:18px;border-radius:22px}
+
+    /* right-aligned logo bubble (NeuroX) */
+    .hero{display:flex;align-items:center;gap:20px}
+    .hero .text{flex:1}
+    .hero .logo{width:180px;height:110px;background:#fff;border-radius:36px;display:flex;align-items:center;justify-content:center}
+    .hero .logo img{max-width:150px}
+
+    /* custom triangular tail for left bubble (big bubble) */
+    .bubble.bubble-left:after{
+      content:'';position:absolute;right:-22px;top:40px;width:64px;height:64px;background:transparent;border-radius:16px;box-shadow:0 16px 40px rgba(0,0,0,0.7);}
+    .bubble.bubble-left:before{
+      content:'';position:absolute;right:-18px;top:42px;width:34px;height:34px;background:#fff;border-radius:8px}
+
+    /* ChatGPT block style (dark grey) */
+    .chatgpt{background:#2a2a2a;color:#eaeaea;border-radius:40px;padding:26px}
+
+    /* round grey logo box to left of chatgpt */
+    .logo-box{width:150px;height:140px;background:#bfbfbf;border-radius:22px;display:flex;align-items:center;justify-content:center;margin-top:18px}
+    .logo-box img{max-width:110px}
+
+    /* Gemini blue bubble */
+    .gemini{background:#008cff;border-radius:28px;color:#001;box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+    .gemini .text{color:#001}
+
+    /* midjourney orange */
+    .midjourney{background:#ffb545;color:#1e1200;border-radius:40px}
+
+    /* deepseek blue rounded */
+    .deepseek{background:#bce9ff;color:#04233a;border-radius:36px}
+
+    /* small image boxes with white border, rounded */
+    .side-icon{width:120px;height:120px;border-radius:18px;background:#0f1720;border:6px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center}
+
+    /* footer bar similar to image */
+    footer{margin-top:40px;background:#a98ef0;padding:28px;border-radius:10px;display:flex;justify-content:space-between;align-items:center}
+    footer .left{max-width:440px;font-size:13px;color:rgba(255,255,255,0.95)}
+    footer .logo-small{display:flex;align-items:center;gap:12px}
+
+    /* Responsive adjustments */
+    @media(min-width:900px){
+      .page{max-width:980px}
+      header h1{font-size:54px}
+      .hero .logo{width:220px;height:120px;border-radius:40px}
+      .logo-box{width:180px;height:160px}
+    }
+
+    /* emulate white rounded corner cutouts from original design with ::after on specific bubbles */
+    .bubble.cut-right{border-radius:30px;padding-right:70px}
+    .bubble.cut-right:after{content:'';position:absolute;right:16px;top:16px;width:140px;height:100px;background:transparent;border-radius:28px}
+
+    /* tiny link styles in lists inside bubbles */
+    ul{margin-top:8px;padding-left:18px}
+    li{margin-bottom:6px}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Будущее начинается с ИИ</h1>
+      <nav class="nav">
+        <a href="#chatgpt">CHAT‑GPT</a>
+        <a href="#deepseek">DEEPSEEK</a>
+        <a href="#neurox">NEUROX</a>
+        <a href="#gemini">GEMINI</a>
+        <a href="#midjourney">MIDJOURNEY</a>
+        <a href="#contacts">CONTACTS</a>
+      </nav>
+    </header>
+
+    <!-- NeuroX hero bubble (left large white bubble + right rounded logo) -->
+    <section style="display:flex;gap:20px;align-items:flex-start">
+      <div style="flex:1">
+        <div class="bubble bubble-left" style="background:#fff;color:#111;border-radius:36px;padding:28px">
+          <div style="font-weight:700;margin-bottom:8px">NeuroX — умная платформа искусственного интеллекта нового поколения</div>
+          <div style="font-size:14px;color:#222;line-height:1.5">NeuroX — это универсальная платформа ИИ, созданная для того, чтобы помочь людям работать быстрее, творить свободнее и находить решения там, где раньше требовалось время и ресурсы. Сервис объединяет инструменты генерации текста, улучшения изображений, анализа информации и интеллектуальной автоматизации — всё в одном удобном пространстве.</div>
+        </div>
+      </div>
+
+      <div style="width:220px">
+        <div class="hero">
+          <div style="width:40px"></div>
+          <div class="logo" style="box-shadow:0 10px 30px rgba(0,0,0,0.6);">
+            <!-- put actual logo file named neurox-logo.png next to HTML -->
+            <img src="ChatGPT Image 24 нояб. 2025 г., 14_53_25.png" alt="NeuroX">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ChatGPT section: left icon box, right grey bubble -->
+    <section id="chatgpt" style="display:flex;gap:18px;align-items:center;margin-top:28px">
+      <div style="flex:0 0 150px">
+        <div class="logo-box">
+          <img src="chatgpt-logo.png" alt="ChatGPT">
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="chatgpt bubble small">
+          <strong>ChatGPT</strong> — это продвинутый искусственный интеллект, который понимает текст и отвечает как человек. Его создала компания OpenAI.
+          <ul>
+            <li>отвечать на вопросы</li>
+            <li>объяснять сложные темы</li>
+            <li>создавать тексты, сайты, сценарии, промты</li>
+            <li>писать код</li>
+            <li>улучшать фото (через инструменты)</li>
+            <li>придумывать идеи</li>
+            <li>общаться как живой человек</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gemini block: left blue bubble, right small icon -->
+    <section id="gemini" style="display:flex;gap:18px;align-items:center;margin-top:18px">
+      <div style="flex:1">
+        <div class="gemini bubble small">
+          <strong>Gemini</strong> — это мощная серия искусственного интеллекта от компании Google / DeepMind, созданная как конкурент ChatGPT.
+          <div style="margin-top:8px">
+            <ul>
+              <li>писать тексты, статьи, сценарии</li>
+              <li>создавать изображения</li>
+              <li>анализировать фото, аудио и видео</li>
+              <li>писать и исправлять код</li>
+              <li>понимать контекст до 1 000 000 токенов</li>
+              <li>генерировать музыку и голос (в некоторых версиях)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="flex:0 0 120px;display:flex;align-items:center;justify-content:center">
+        <div class="side-icon" style="border-radius:20px;background:#0a2345;border:6px solid rgba(255,255,255,0.12)">
+          <img src="gemini-symbol.png" style="max-width:70px" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- MidJourney block (icon left, orange bubble right) -->
+    <section id="midjourney" style="display:flex;gap:18px;align-items:center;margin-top:26px">
+      <div style="flex:0 0 120px">
+        <div class="side-icon" style="background:#5b4000;border-radius:18px;border:6px solid rgba(255,255,255,0.12)">
+          <img src="sailboat.png" alt="" style="max-width:70px;filter:invert(1)">
+        </div>
+      </div>
+      <div style="flex:1">
+        <div class="midjourney bubble small">
+          <strong>MidJourney — искусственный интеллект для генерации изображений</strong>
+          <p style="margin-top:8px">MidJourney — современный ИИ, который позволяет создавать изображения по текстовому описанию. Он популярен среди художников, дизайнеров и креаторов благодаря высокому качеству и художественному стилю создаваемых картин.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DeepSeek (bottom left bubble + right icon) -->
+    <section id="deepseek" style="display:flex;gap:18px;align-items:center;margin-top:26px;margin-bottom:30px">
+      <div style="flex:1">
+        <div class="deepseek bubble small">
+          <strong>Что такое DeepSeek</strong>
+          <ul>
+            <li>DeepSeek — китайская компания, занимающаяся разработкой больших языковых моделей (LLM) и ИИ.</li>
+            <li>Основана в 2023 году. Штаб-квартира — в Ханчжоу.</li>
+            <li>Глава и основатель — Лян Вэньфэн (Liang Wenfeng).</li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex:0 0 120px;display:flex;align-items:center;justify-content:center">
+        <div class="side-icon" style="background:linear-gradient(180deg,#25f0d8,#2fb8ff);border-radius:18px;border:6px solid #fff">
+          <img src="deepseek-icon.png" alt="" style="max-width:88px">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>NeuroX</h3>
+      <p>Это умная платформа ИИ нового поколения...</p>
+    </div>
+    <div class="footer-right">
+      <div class="social-icons">
+        <!-- Inline SVG icons to ensure they always display -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,22 2,22"/></svg>
+      </div>
+      <img src="logo-neurox.png" class="footer-logo" alt="NeuroX">
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <!-- NOTES: Чтобы страница выглядела как на макете:
+       - Положи файл с фоном 'HOMEPAGE (2).jpg' в ту же папку, что и этот HTML.
+       - Добавь логотипы: neurox-logo.png, chatgpt-logo.png, gemini-symbol.png, sailboat.png, deepseek-icon.png и neurox-footer-logo.png в ту же папку.
+       - Можно скорректировать отступы в style.css для идеального соответствия пикселям.
+  -->
+</body>
+</html>
+
+
+
